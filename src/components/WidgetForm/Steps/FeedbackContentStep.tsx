@@ -24,9 +24,18 @@ export default function FeedbackContentStep({
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault(); 
+
+    console.log({
+      screenshot,
+      comment
+    })
+
+    onFeedbackSent(); 
+    
   }
 
-  onFeedbackSent(); 
+
+
   return (
     <>
       <header>

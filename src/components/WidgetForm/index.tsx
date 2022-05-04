@@ -52,18 +52,16 @@ function handleRestartFeedback(){
         <FeedbackSuccessStep onFeedbackRestartRequested ={handleRestartFeedback}/>
       ) : (
         <>
-        {!feedbackType ? (
+      {!feedbackType ? (
       <FeedbackTypeStep  onFeedbackTypeChanged={setFeedbackType}/>
-) : (
-  <FeedbackContentStep 
-  feedbackType={feedbackType} 
-  onFeedbackRestartRequested= {handleRestartFeedback}
-  onFeedbackSent={() => setFeedbackSent}
-  />
-)}
-</>
-
-
+          ) : (
+              <FeedbackContentStep 
+              feedbackType={feedbackType} 
+              onFeedbackRestartRequested= {handleRestartFeedback}
+              onFeedbackSent={() => setFeedbackSent(true)}
+              />
+            )}
+            </>
       )}
 
 
